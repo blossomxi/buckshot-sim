@@ -1,24 +1,17 @@
-import random
+#!/usr/bin/env python3
 from player import *
 from coinFlip import *
+from gameWithCoop import *
         
-        
-class GameWithCoop:
-    #Start off with two bullets
-    def game_global():
-        global bulletCount
-        bulletCount = 2
-    def Game(input):
-        print("We have" + bulletCount + "in the chamber.")
+def main():
+    player1, player2 = coinFlip.headsOrTails(option = input)
     
-        
+    gameCoop = GameWithCoop()
 
-    
-    
-coinFlip.headsOrTails(input)
-# gameSelection.chooseOption(input)
-    
+    gameCoop.trackTurn(player1, player2)
+    gameCoop.Game(input)
 
 
     
-        
+if __name__ == "__main__":
+    main()
