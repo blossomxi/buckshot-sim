@@ -1,16 +1,15 @@
 
-from main import GameWithCoop
 import random
-import player
+from player import Player
 
 
-class coinFlip:     
+class CoinFlip:     
     #TODO: When user enters heads or tails and when coin flip != their option player 2 gets to go first
     #TODO: When heads or tails have it save who goes first // If player 1 picks heads and loses player 2 goes first 
     def headsOrTails(option):
         #Second number = their turn
-        player1 = player(3,0)
-        player2 = player(3,0)
+        player1 = Player(3,0)
+        player2 = Player(3,0)
 
         coin = random.randint(0,1)
        
